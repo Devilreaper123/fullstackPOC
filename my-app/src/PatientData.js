@@ -25,7 +25,6 @@ export class PatientData extends Component {
   FilterFn() {
     var PatientIdFilter = this.state.PatientIdFilter;
     var PatientNameFilter = this.state.PatientNameFilter;
-
     var filteredData = this.state.PatientWithoutFilter.filter(function (el) {
       return (
         el.PatientId.toString()

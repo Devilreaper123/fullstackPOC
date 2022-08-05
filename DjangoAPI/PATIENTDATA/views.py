@@ -38,8 +38,10 @@ def patientDataApi(req, id=0):
         department.delete()
         return JsonResponse("DELETED SUCCESSFULLY", safe=False)
 
+
 class UploadFileView(generics.CreateAPIView):
     serializer_class = FileUploadSerializer
+
     def post(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -60,7 +62,8 @@ class UploadFileView(generics.CreateAPIView):
             )
             new_file.save()
         return Response({"status": "success"})
-        
+
+
 def front(request):
-    context = { }
+    context = {}
     return render(request, "index.html", context)

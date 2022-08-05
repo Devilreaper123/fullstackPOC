@@ -55,7 +55,6 @@ export class PatientData extends Component {
         this.setState({ Patient: data, PatientWithoutFilter: data });
       });
   }
-
   componentDidMount() {
     this.refreshList();
   }
@@ -119,7 +118,6 @@ export class PatientData extends Component {
       Prescription: pt.Prescription,
     });
   }
-
   createClick() {
     fetch(variables.API_URL + "patientnewdata", {
       method: "POST",

@@ -18,4 +18,3 @@ class PatientNewData(models.Model):
     NoteId = models.PositiveIntegerField(unique=True)
     NoteDateTime = models.DateTimeField(auto_now_add=True, blank=True)
     Prescription = models.TextField(max_length=600)
-
